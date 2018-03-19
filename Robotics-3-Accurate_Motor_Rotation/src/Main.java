@@ -29,6 +29,9 @@ public class Main {
 		// display the tacho count in row 0
 		LCD.drawString("Tacho Read: " + LEFT_MOTOR.getTachoCount(), 0, 0);
 
+		// block the thread until a button is pressed
+		buttons.waitForAnyPress();
+		
 		// rotate to the angle 360
 		LEFT_MOTOR.rotateTo(360);
 
